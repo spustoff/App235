@@ -51,7 +51,7 @@ struct Users_1: View {
                 }, label: {
                     
                     Text("Next")
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .font(.system(size: 15, weight: .regular))
                         .frame(maxWidth: .infinity)
                         .frame(height: 50)

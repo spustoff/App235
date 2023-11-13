@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseRemoteConfig
+import ApphudSDK
 import WebKit
 
 struct WebSystem: View {
@@ -27,7 +28,6 @@ class WController: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebVi
     
     @AppStorage("first_open") var firstOpen: Bool = true
     @AppStorage("silka") var silka: String = ""
-    @AppStorage("random_id") var random_id: String = ""
     
     @Published var url_link: URL = URL(string: "h")!
     
@@ -51,7 +51,7 @@ class WController: UIViewController, WKNavigationDelegate, WKUIDelegate, UIWebVi
             
             guard let url = URL(string: "\(resulter)") else { return }
             
-            if let modifiedURL = self.insertValueAfterClickID(in: url.absoluteString, value: self.random_id) {
+            if let modifiedURL = self.insertValueAfterClickID(in: url.absoluteString, value: Apphud.userID()) {
                 
                 self.url_link = modifiedURL
                 

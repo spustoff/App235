@@ -67,7 +67,7 @@ struct Users_4: View {
                     }, label: {
                         
                         Text("Enable Notification")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .font(.system(size: 15, weight: .regular))
                             .frame(maxWidth: .infinity)
                             .frame(height: 50)
